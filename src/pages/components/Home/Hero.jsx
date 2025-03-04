@@ -3,8 +3,8 @@ import Spline from '@splinetool/react-spline';
 export default function Hero() {
 	return (
 		<div className="flex w-full h-[100vh]">
-			<div className="part-1 w-[50vw] h-[100vh] ">
-				<div className="bg-black h-15 w-48 absolute z-1 bottom-[-35px] right-[50%]"></div>
+			<div className="part-1 w-[50vw] h-[100vh]n">
+				<div className="bg-black h-15 w-39 absolute z-1 bottom-[-95px] right-[50%] overflow-hidden"></div>
 				<Spline scene="https://prod.spline.design/GOud1De8DJCvmcgK/scene.splinecode" className='hidden relative md:block' />
 			</div>
 			<div className="part-2 w-[50vw] bg-black text-white flex flex-col justify-center items-center">

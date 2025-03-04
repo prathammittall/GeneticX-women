@@ -8,7 +8,7 @@ const Header = () => {
     const navigate = useNavigate()
     const { userLoggedIn } = useAuth()
     return (
-        <nav className='flex flex-row gap-x-2 w-full z-20 fixed top-0 left-0 h-12 border-b place-content-center items-center' style={{ backgroundColor: '#f3eee5' }}>
+        <nav className='flex flex-row gap-x-2 w-full z-20 fixed top-0 left-0 h-12 border-b place-content-center items-center bg-[#181818]'>
             {
                 userLoggedIn
                     ?
@@ -18,8 +18,8 @@ const Header = () => {
                     </>
                     :
                     <>
-                        <Link className='text-md font-bold mx-5' to={'/login'}>Login</Link>
-                        <Link className='text-m font-bold mx-5' to={'/register'}>Register</Link>
+                        <Link className='text-md text-white font-bold mx-5' to={'/login'}>Login</Link>
+                        <Link className='text-m text-white font-bold mx-5' to={'/register'}>Register</Link>
                     </>
             }
 

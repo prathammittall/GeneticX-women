@@ -11,7 +11,9 @@ import Footer from './pages/components/Home/Footer'
 function App() {
 	return (
 		<>
-			<Navbar />
+			<div id="home">
+				<Navbar />
+			</div>
 			<Hero />
 			<Stats />
 			
