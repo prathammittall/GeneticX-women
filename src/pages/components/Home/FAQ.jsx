@@ -3,23 +3,26 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaChevronDown } from "react-icons/fa";
 
 const FAQ = () => {
-  const faqs =[
+  const faqs = [
     {
-      "question": "What is Lawgic?",
-      "answer": "Lawgic is an AI-powered legal research platform designed to help users access past court judgments, understand legal precedents, and streamline case research. It offers AI-driven case matching, legal document summarization, and a user-driven discussion forum."
+      "question": "What is GeneticX-Women?",
+      "answer": "GeneticX-Women is an AI-powered platform that analyzes DNA sequences to predict and detect potential health issues specific to women, including breast cancer, PCOS, endometriosis, and genetic disorders like Turner syndrome. Our technology enables early detection of genetic predispositions, empowering women to make proactive health decisions before symptoms appear."
     },
     {
-      "question": "How does Lawgic improve legal research?",
-      "answer": "Lawgic leverages AI and Natural Language Processing (NLP) to provide relevant case recommendations, summarize lengthy judgments, and categorize legal data efficiently, reducing research time and improving accessibility."
+      "question": "How does GeneticX-Women improve women's healthcare?",
+      "answer": "GeneticX-Women leverages advanced AI and machine learning models to analyze genetic data with unprecedented accuracy. By identifying mutations and genetic markers associated with women's health conditions at an early stage, we enable preventive care approaches that can significantly improve treatment outcomes and reduce healthcare costs."
     },
     {
-      "question": "Which courts and cases does Lawgic cover?",
-      "answer": "Lawgic focuses on Indian legal cases, including Supreme Court and High Court judgments. We continuously expand our database to ensure comprehensive legal research."
+      "question": "What types of health conditions can GeneticX-Women predict?",
+      "answer": "Our platform focuses on women-specific health conditions including breast cancer, ovarian cancer, polycystic ovary syndrome (PCOS), endometriosis, osteoporosis, and genetic disorders like Turner syndrome. We continuously expand our prediction capabilities as more genetic research becomes available."
     },
-    
     {
-      "question": "Is Lawgic free to use?",
-      "answer": "Lawgic offers a free basic version with essential search features. Advanced features like AI-driven insights, saved searches, and personalized recommendations may be available under premium plans."
+      "question": "How do I submit my DNA for analysis?",
+      "answer": "GeneticX-Women accepts DNA samples in FASTA or ATGC format. You can upload existing genetic data from services like 23andMe or Ancestry, or request our home testing kit. All data is processed with industry-leading encryption and privacy measures to ensure the security of your genetic information."
+    },
+    {
+      "question": "Is GeneticX-Women accessible to everyone?",
+      "answer": "GeneticX-Women offers a free basic analysis that includes essential genetic risk assessments. Our premium plans provide deeper insights, personalized health recommendations, genetic counseling sessions, and ongoing monitoring of genetic research relevant to your specific DNA profile."
     }
   ];
   
@@ -30,18 +33,38 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-20 px-6">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-24 px-6 bg-black relative overflow-hidden">
+      {/* Subtle background elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <motion.div 
+          className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#FF00CD]/10 blur-3xl"
+          animate={{ 
+            opacity: [0.2, 0.4, 0.2],
+          }}
+          transition={{ duration: 8, repeat: Infinity }}
+        />
+        <motion.div 
+          className="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-[#734EFF]/10 blur-3xl"
+          animate={{ 
+            opacity: [0.2, 0.5, 0.2],
+          }}
+          transition={{ duration: 10, repeat: Infinity }}
+        />
+      </div>
+
+      <div className="max-w-3xl mx-auto relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          transition={{ duration: 0.7 }}
+          className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4 text-white">Frequently Asked Questions</h2>
-          <p className="max-w-2xl mx-auto text-white">
-            Find answers to common questions about our legal AI platform and how it can revolutionize your legal research process.
+          <h2 className="text-4xl font-bold mb-5 bg-gradient-to-r from-[#FF00CD] to-[#734EFF] text-transparent bg-clip-text inline-block">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-white/80">
+            Learn more about our DNA-based women's health prediction platform
           </p>
         </motion.div>
         
@@ -52,28 +75,35 @@ const FAQ = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              className={`border-4 border-transparent bg-white rounded-xl overflow-hidden ${
-                openIndex === index ? "border-[#FF00CD] text-[#FF00CD]" : "border-[#734EFF] text-black"
-              }`}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="border border-white/10 rounded-lg overflow-hidden"
             >
-              <div 
-                className={`p-6 cursor-pointer flex justify-between items-center transition-colors duration-300 ${
-                  openIndex === index ? "" : "hover:bg-white/90"
-                }`} 
+              <motion.div
+                whileHover={{ backgroundColor: "rgba(255,255,255,0.03)" }}
+                transition={{ duration: 0.2 }}
+                className={`p-5 cursor-pointer flex justify-between items-center ${
+                  openIndex === index ? "border-b border-white/10" : ""
+                }`}
                 onClick={() => toggleFAQ(index)}
               >
-                <h3 className="text-xl font-semibold pr-8">
+                <h3 className={`text-lg font-medium pr-4 ${
+                  openIndex === index ? "text-[#FF00CD]" : "text-white"
+                }`}>
                   {faq.question}
                 </h3>
                 <motion.div
-                  animate={{ rotate: openIndex === index ? 180 : 0 }}
+                  animate={{ 
+                    rotate: openIndex === index ? 180 : 0,
+                    backgroundColor: openIndex === index ? "#FF00CD" : "transparent"
+                  }}
                   transition={{ duration: 0.3 }}
-                  className={`flex-shrink-0 ${openIndex === index ? "text-[#FF00CD]" : "text-black/60"}`}
+                  className={`w-6 h-6 rounded-full flex items-center justify-center ${
+                    openIndex === index ? "text-white" : "text-[#734EFF]"
+                  }`}
                 >
-                  <FaChevronDown />
+                  <FaChevronDown size={14} />
                 </motion.div>
-              </div>
+              </motion.div>
 
               <AnimatePresence>
                 {openIndex === index && (
@@ -83,7 +113,7 @@ const FAQ = () => {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="px-6 pb-6 text-black/90 leading-relaxed">
+                    <div className="px-5 py-4 text-white/70 bg-white/5">
                       {faq.answer}
                     </div>
                   </motion.div>
@@ -93,23 +123,26 @@ const FAQ = () => {
           ))}
         </div>
 
-        {/* Call to Action */}
+        {/* Simple CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-12 text-center"
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-14 text-center"
         >
-          <p className="text-black/70 mb-6">
-            Still have questions? Our team is here to help.
-          </p>
-          <a 
-            href="#contact" 
-            className="inline-block bg-[#FF00CD] text-white px-8 py-3.5 rounded-lg font-medium hover:bg-[#FF00CD]/90 transition-colors duration-300"
-          >
-            Contact Support
-          </a>
+          <div className="p-6 border border-white/10 rounded-xl bg-gradient-to-br from-black to-black/70">
+            <p className="text-white/80 mb-4">
+              Ready to discover your genetic health profile?
+            </p>
+            <motion.button 
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-gradient-to-r from-[#FF00CD] to-[#734EFF] text-white font-medium px-8 py-3 rounded-md"
+            >
+              Upload Your DNA Sample
+            </motion.button>
+          </div>
         </motion.div>
       </div>
     </section>
