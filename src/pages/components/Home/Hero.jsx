@@ -7,7 +7,7 @@ export default function Hero() {
 				<div className="bg-black flex justify-center h-15 w-39 absolute z-1 bottom-[-95px] right-[50%] overflow-hidden"></div>
 				<Spline scene="https://prod.spline.design/GOud1De8DJCvmcgK/scene.splinecode" className='hidden relative md:block' />
 			</div>
-			<div className="part-2 w-[50vw] bg-black text-white flex flex-col justify-center items-center">
+			<div className="part-2 w-[50vw] bg-black text-white flex flex-col justify-center items-center relative bottom-21">
 				<div className="text-center mb-8">
 					<h1 className="text-7xl font-black leading-tight">
 						<span className="block text-white drop-shadow-[0_0_8px_rgba(255,0,205,0.6)]">DECODE</span>

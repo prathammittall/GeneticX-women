@@ -80,7 +80,7 @@ function Navbar() {
 					</div>
 				)}
 
-				<div className={`max-w-3xl w-full transition-all duration-500 relative overflow-hidden ${isScrolled
+				<div className={`max-w-[575px] w-full transition-all duration-500 relative overflow-hidden ${isScrolled
 					? 'bg-black/60 backdrop-blur-md shadow-[0_0_25px_rgba(255,0,205,0.3)] rounded-full border border-white/10 px-8'
 					: 'bg-transparent px-4'
 					}`}>
@@ -129,19 +129,19 @@ function Navbar() {
 										<span className="absolute inset-0 -z-10 rounded-md opacity-0 group-hover:opacity-100 bg-[#FF00CD]/10 blur-md transition-opacity duration-300"></span>
 
 										{/* Active indicator - always visible but with shadow only when scrolled */}
-										{activePage === link.id && (
+										{/* {activePage === link.id && (
 											<motion.span
 												className={`absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-[#FF00CD] to-[#734EFF] ${isScrolled ? 'shadow-[0_0_8px_rgba(255,0,205,0.6)]' : ''
 													}`}
 												layoutId="activeIndicator"
 											/>
-										)}
+										)} */}
 									</a>
 								</li>
 							))}
 							<li className="ml-6">
 								<motion.a
-									href="https://lawgic-login-auth.vercel.app/"
+									href="https://gene-omega.vercel.app/"
 									className="py-2.5 px-7 rounded-full bg-gradient-to-r from-[#FF00CD] to-[#734EFF] text-white font-medium text-sm relative overflow-hidden"
 									whileHover={{ scale: 1.05 }}
 									whileTap={{ scale: 0.98 }}
@@ -226,7 +226,7 @@ function Navbar() {
 								))}
 								<li className="pt-3">
 									<a
-										href="https://lawgic-login-auth.vercel.app/"
+										href="https://gene-omega.vercel.app/"
 										className="block py-3 px-7 mx-auto w-max rounded-full bg-gradient-to-r from-[#FF00CD] to-[#734EFF] text-white shadow-[0_0_15px_rgba(255,0,205,0.4)]"
 									>
 										Login

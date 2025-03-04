@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Navigate, Link } from 'react-router-dom';
+import { motion } from "framer-motion";
 import { doSignInWithEmailAndPassword, doSignInWithGoogle } from '../../../firebase/auth';
 import { useAuth } from '../../../contexts/authContext';
 
@@ -24,14 +25,22 @@ const Login = () => {
         }
     };
 
+    // Update the onGoogleSignIn function
     const onGoogleSignIn = async (e) => {
         e.preventDefault();
         if (!isSigningIn) {
             setIsSigningIn(true);
             try {
-                await doSignInWithGoogle();
-                window.location.href = "https://law-files-chatbot-nzjiwmxfuzgpsnwzbepqhf.streamlit.app/";
+                const result = await doSignInWithGoogle();
+                if (result.user) {
+                    // Successful login
+                    window.location.href = "https://law-files-chatbot-nzjiwmxfuzgpsnwzbepqhf.streamlit.app/";
+                } else {
+                    setErrorMessage("Failed to sign in with Google");
+                    setIsSigningIn(false);
+                }
             } catch (err) {
+                setErrorMessage(err.message || "Failed to sign in with Google");
                 setIsSigningIn(false);
             }
         }

@@ -8,8 +8,8 @@ const firebaseConfig = {
 	storageBucket: "gene-958a7.firebasestorage.app",
 	messagingSenderId: "553873869199",
 	appId: "1:553873869199:web:a7a8ac3777ff6d7f0e23fa",
-	measurementId: "G-J78QQF2Y0Z",
-};
+	measurementId: "G-J78QQF2Y0Z"
+  };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
