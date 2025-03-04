@@ -25,8 +25,8 @@ const Register = () => {
         <>
             {userLoggedIn && <Navigate to={'/home'} replace={true} />}
 
-            <main className="w-full h-screen flex justify-center items-center bg-[#f6f0e8]">
-                <div className="w-96 text-[#3c2f21] space-y-5 p-6 shadow-lg border rounded-2xl bg-white">
+            <main className="w-full h-screen flex justify-center items-center bg-black">
+                <div className="w-96 text-white space-y-5 p-6 border border-pink-500 rounded-2xl bg-[#0d0d0d] shadow-lg">
                     <div className="text-center">
                         <h3 className="text-xl font-semibold">Create a New Account</h3>
                     </div>
@@ -38,7 +38,7 @@ const Register = () => {
                                 required
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className="w-full mt-2 px-3 py-2 text-[#3c2f21] bg-[#f6f0e8] outline-none border border-[#c5b9a3] rounded-lg"
+                                className="w-full mt-2 px-3 py-2 text-white bg-[#131313] outline-none border border-[#444] rounded-lg"
                             />
                         </div>
 
@@ -49,7 +49,7 @@ const Register = () => {
                                 required
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                className="w-full mt-2 px-3 py-2 text-[#3c2f21] bg-[#f6f0e8] outline-none border border-[#c5b9a3] rounded-lg"
+                                className="w-full mt-2 px-3 py-2 text-white bg-[#131313] outline-none border border-[#444] rounded-lg"
                             />
                         </div>
 
@@ -60,7 +60,7 @@ const Register = () => {
                                 required
                                 value={confirmPassword}
                                 onChange={(e) => setConfirmPassword(e.target.value)}
-                                className="w-full mt-2 px-3 py-2 text-[#3c2f21] bg-[#f6f0e8] outline-none border border-[#c5b9a3] rounded-lg"
+                                className="w-full mt-2 px-3 py-2 text-white bg-[#131313] outline-none border border-[#444] rounded-lg"
                             />
                         </div>
 
@@ -68,14 +68,14 @@ const Register = () => {
 
                         <button
                             type="submit"
-                            className="w-full px-4 py-2 text-white font-medium rounded-lg bg-[#3c2f21] hover:bg-[#2b2115] transition"
+                            className="w-full px-4 py-2 text-white font-medium rounded-lg bg-pink-500 hover:bg-pink-600 transition"
                         >
                             {isRegistering ? 'Signing Up...' : 'Sign Up'}
                         </button>
-                        
+
                         <div className="text-sm text-center">
                             Already have an account?{' '}
-                            <Link to={'/login'} className="font-bold hover:underline">Continue</Link>
+                            <Link to={'/login'} className="font-bold text-pink-500 hover:underline">Continue</Link>
                         </div>
                     </form>
                 </div>
