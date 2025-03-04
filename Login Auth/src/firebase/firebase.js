@@ -2,18 +2,16 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBhjNZGLIfxi_5rUfnAEcqELkibeTYvAYU",
-  authDomain: "lawgic-df563.firebaseapp.com",
-  projectId: "lawgic-df563",
-  storageBucket: "lawgic-df563.firebasestorage.app",
-  messagingSenderId: "254425944447",
-  appId: "1:254425944447:web:fb25566d2e442f00944a4a",
-  measurementId: "G-9ZRYYDQG4T"
+	apiKey: "AIzaSyDzAaPZDqN0X7UzFnn2BQRpxjCFLO-zDZw",
+	authDomain: "gene-958a7.firebaseapp.com",
+	projectId: "gene-958a7",
+	storageBucket: "gene-958a7.firebasestorage.app",
+	messagingSenderId: "553873869199",
+	appId: "1:553873869199:web:a7a8ac3777ff6d7f0e23fa",
+	measurementId: "G-J78QQF2Y0Z",
 };
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app)
-
-
+const auth = getAuth(app);
 
 export { app, auth };

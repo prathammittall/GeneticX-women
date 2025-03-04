@@ -41,7 +41,8 @@ function Navbar() {
 		{ name: 'Home', href: 'home', id: 'home' },
 		{ name: 'Services', href: 'services', id: 'services' },
 		{ name: 'Team', href: 'team', id: 'team' },
-		{ name: 'Pricing', href: 'pricing', id: 'pricing' }
+		{ name: 'Pricing', href: 'pricing', id: 'pricing' },
+		{ name: 'FAQ', href: 'FAQ', id: 'FAQ' }
 	];
 
 	const handleClick = (e, href) => {
