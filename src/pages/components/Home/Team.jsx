@@ -6,42 +6,40 @@ function Team() {
   // Team members data with random names and no images
   const teamMembers = [
     {
-      name: "Dr. Jane Smith",
-      role: "Founder & Chief Geneticist",
+      name: "Pratham Mittal",
+      role: "Team Lead",
       bio: "PhD in Molecular Genetics with 15+ years of experience in genomic research. Pioneered several breakthrough studies in women's genetic health markers.",
       socialLinks: {
-        linkedin: "#",
-        twitter: "#",
-        github: "#"
+        linkedin: "https://www.linkedin.com/in/pratham-mittal-057420324/",
+        twitter: "",
+        github: "https://github.com/prathammittall"
       }
     },
     {
-      name: "Robert Johnson",
-      role: "Lead AI Engineer",
+      name: "Dhruv K Aggarwal",
+      role: "AI/ML Specialist",
       bio: "Former ML researcher at Stanford AI Lab with expertise in developing predictive algorithms for medical applications. Specializes in genetic pattern recognition.",
       socialLinks: {
-        linkedin: "#",
-        twitter: "#",
-        github: "#"
+        linkedin: "https://www.linkedin.com/in/dhruv-kumar-aggarwal/",
+        twitter: "",
+        github: "https://github.com/dhruv-kaggarwal"
       }
     },
     {
-      name: "Dr. Emily Chen",
-      role: "Medical Director",
+      name: "Yamini Baluni",
+      role: "Frontend Developer",
       bio: "Board-certified in Clinical Genetics and Obstetrics. Leads clinical interpretations of genetic data and develops actionable healthcare recommendations.",
       socialLinks: {
-        linkedin: "#",
-        twitter: "#",
-        github: null
+        linkedin: "https://www.linkedin.com/in/yamini-baluni-49985b320/",
+        github: "https://github.com/yamini-baluni"
       }
     },
     {
-      name: "Michael Williams",
-      role: "CTO & Platform Architect",
+      name: "Yashika Budhiraja",
+      role: "UI/UX Designer",
       bio: "Tech visionary with background in bioinformatics and secure healthcare platforms. Designed GeneticX-Women's infrastructure for speed, security, and scalability.",
       socialLinks: {
         linkedin: "#",
-        twitter: "#",
         github: "#"
       }
     }

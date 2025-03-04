@@ -27,8 +27,10 @@ function App() {
 				<Pricing/>
 			</div>
 
-			<FAQ />
-
+			<div id="FAQ">
+				<FAQ />
+			</div>
+			
 			<Footer />
 			
 		</>
