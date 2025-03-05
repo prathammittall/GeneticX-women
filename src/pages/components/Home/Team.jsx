@@ -27,7 +27,7 @@ function Team() {
         },
         {
             name: "Yamini Baluni",
-            role: "Frontend Developer",
+            role: "Medical Specialist",
             bio: "",
             socialLinks: {
                 linkedin: "https://www.linkedin.com/in/yamini-baluni-49985b320/",
