@@ -10,8 +10,7 @@ const Header = () => {
     const { userLoggedIn } = useAuth();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    
-    // Handle scroll effects
+
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 50) {
