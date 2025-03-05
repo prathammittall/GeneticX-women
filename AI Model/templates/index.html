@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA Mutation Prediction</title>
+    <link rel="icon" type="image/jpg" href="logogeneticX.png">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: radial-gradient(circle at top left, #0a001f, #000);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            width: 400px;
+            padding: 30px;
+            background: rgba(20, 20, 20, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 0 20px #734EFF;
+            text-align: center;
+        }
+
+        .form-container h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #FF00CD, #734EFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+
+        input[type="text"], input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            background: transparent;
+            border: 2px solid #734EFF;
+            border-radius: 8px;
+            color: white;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(to right, #FF00CD, #734EFF);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            box-shadow: 0 0 15px #FF00CD;
+        }
+
+        a {
+            color: #734EFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>DNA Mutation Prediction</h1>
+        <form id="prediction-form" method="POST" action="/predict" enctype="multipart/form-data">
+            <label for="sequence">DNA Sequence (optional if uploading a FASTA file):</label>
+            <input type="text" name="sequence_input" id="sequence" placeholder="e.g. ATGCATGC" />
+            <label for="fasta_file">Upload FASTA File:</label>
+            <input type="file" name="fasta_file" id="fasta_file" accept=".fasta">
+            <button type="submit" name="action" value="view">View Result</button>
+            <button type="submit" name="action" value="download">Download PDF</button>
+        </form>
+        <p><a href="/explanation">Explanation</a></p>
+    </div>
+</body>
+</html>

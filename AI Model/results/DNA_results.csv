@@ -1,0 +1,2 @@
+ID,Sequence,Length,GC_Content,Mutation_Type,Gene,Ancestral_Region,Likelihood_of_Mutation,Genetic_Condition,Protein_Synthesis_Effect,Genealogy_Markers,Inheritance_Type,Phenotypic_Expression,Pathogenic_Score,Ethnic_Association,Evolutionary_Clade,Epigenetic_Modifications,Formatted_Sequence,Predicted_Mutation_Type
+10,TTGCCGTGTGCTGGTGACGCAATTACAATCAAGAAAGCGCTACGAGAGGAGCGGTGTGTCAGGTAACTATAGTTAAGTATAGTAACGTCGCAGTGTGTCGAAAGTCGTCT,110,47.27,,Gene_110,Africa,0.59,Huntington's Disease,No,ECJMTIL7,Autosomal Recessive,Normal,0.57,Africa,Reptile,,TTGCCGTGTG...,Deletion
