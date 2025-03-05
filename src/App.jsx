@@ -1,5 +1,4 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Navbar from './pages/components/Home/Navbar'
 import Hero from './pages/components/Home/Hero'
