@@ -216,7 +216,7 @@ const Header = () => {
                         <Link 
                             to="/" 
                             className={`text-sm transition-colors hover:text-[#FF00CD] ${
-                                isActive('/') ? 'text-[#FF00CD]' : 'text-white'
+                                isActive('localhost:5173') ? 'text-[#FF00CD]' : 'text-white'
                             }`}
                         >
                             Home

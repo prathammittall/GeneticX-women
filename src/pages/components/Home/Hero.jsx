@@ -22,7 +22,7 @@ export default function Hero() {
 				<div className="relative group">
 					<div className="absolute -inset-0.5 bg-gradient-to-r from-[#FF00CD] to-[#734EFF] rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
 					<button className="relative px-10 py-4 bg-black text-xl font-bold rounded-full border-2 border-[#FF00CD] text-white tracking-wider overflow-hidden transition-all duration-500 ease-in-out hover:text-black hover:shadow-[0_0_25px_#FF00CD] group-hover:border-transparent">
-						<span className="relative z-20">GET STARTED</span>
+						<span className="relative z-20"><a href="#pricing">GET STARTED</a></span>
 						<span className="absolute inset-0 bg-gradient-to-r from-[#FF00CD] to-[#734EFF] z-10 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
 					</button>
 				</div>
