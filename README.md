@@ -21,9 +21,12 @@ This project implements a machine learning model with a frontend and backend. Fo
 
 1. Open a terminal and navigate to the frontend directory.
 2. Run the following commands:
-   sh
+   '''sh
    npm install
+   '''
+   '''sh
    npm run dev
+   '''
    
 
 This will install dependencies and start the development server for the frontend.
