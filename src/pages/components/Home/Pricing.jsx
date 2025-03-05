@@ -46,27 +46,8 @@ function Pricing() {
       ],
       color: "#734EFF",
       popular: true
-    },
-    {
-      name: "Family",
-      price: {
-        monthly: 49.99,
-        annual: 39.99
-      },
-      description: "Complete coverage for up to 4 family members",
-      features: [
-        { text: "Advanced DNA analysis for 4 members", included: true },
-        { text: "All 28 health condition predictions", included: true },
-        { text: "Family genetic correlation reports", included: true },
-        { text: "Priority 24/7 support", included: true },
-        { text: "Personalized health recommendations", included: true },
-        { text: "Advanced mutation detection", included: true },
-        { text: "Family history integration", included: true },
-        { text: "4 genetic counseling sessions per year", included: true }
-      ],
-      color: "#FF00CD",
-      popular: false
     }
+    
   ];
   
   return (
@@ -130,7 +111,7 @@ function Pricing() {
         </motion.div>
         
         {/* Pricing cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
             <motion.div
               key={plan.name}
@@ -146,11 +127,11 @@ function Pricing() {
                 boxShadow: `0 10px 25px -5px ${plan.color}40` 
               }}
             >
-              {plan.popular && (
+              {/* {plan.popular && (
                 <div className="bg-gradient-to-r from-[#FF00CD] to-[#734EFF] text-white text-center text-sm font-medium py-1">
                   MOST POPULAR
                 </div>
-              )}
+              )} */}
               
               <div className="p-8">
                 <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
@@ -174,7 +155,7 @@ function Pricing() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  {plan.name === "Free" ? "Get Started" : "Subscribe Now"}
+                  {plan.name === "Free" ? <a href='https://gene-omega.vercel.app/'>Get Started</a> : <a href='https://gene-login-m2.vercel.app/'>Subscribe Now</a>}
                 </motion.button>
                 
                 <div className="space-y-4">
