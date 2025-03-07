@@ -2,7 +2,7 @@ import Spline from '@splinetool/react-spline';
 
 export default function Hero() {
 	return (
-		<div className="flex w-full h-[100vh]">
+		<div className="flex justify-center md:justify-between w-full h-[100vh]">
 			<div className="part-1 w-[50vw] h-[100vh]">
 				<div className="bg-black flex justify-center h-15 w-39 absolute z-1 bottom-[-95px] right-[50%] overflow-hidden"></div>
 				<Spline scene="https://prod.spline.design/GOud1De8DJCvmcgK/scene.splinecode" className='hidden relative md:block' />
