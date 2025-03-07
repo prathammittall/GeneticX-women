@@ -5,7 +5,7 @@ export default function Hero() {
 		<div className="flex justify-center md:justify-between w-full h-[100vh]">
 			<div className="part-1 w-[50vw] h-[100vh]">
 				<div className="bg-black flex justify-center h-15 w-39 absolute z-1 bottom-[-95px] right-[50%] overflow-hidden"></div>
-				<Spline scene="https://prod.spline.design/GOud1De8DJCvmcgK/scene.splinecode" className='hidden relative md:block' />
+				<Spline scene="https://prod.spline.design/GOud1De8DJCvmcgK/scene.splinecode" className='none relative md:block' />
 			</div>
 			<div className="part-2 w-[50vw] bg-black text-white flex flex-col justify-center items-center relative bottom-21">
 				<div className="text-center mb-8">
